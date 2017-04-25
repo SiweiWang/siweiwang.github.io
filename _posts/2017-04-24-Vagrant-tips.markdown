@@ -91,6 +91,35 @@ Here we can skip the provisioning step when start the vm since all the changes n
 
 ## Set up http proxy for vm
 
+When running vagrant in the enterprise network, a web proxy is usually needed to access public internet.
+
+A easy to setup proxy for the vms in vagrant is to use [vagrant-proxyconf](http://tmatilai.github.io/vagrant-proxyconf/)
+
+Following code will get the proxy setting set in current environment variable and apply them to the vm
+
+First of all, install the plugin 
+
+{% highlight Bash shell scripts %}
+
+vagrant plugin install vagrant-proxyconf
+
+{% endhighlight %}
+
+in Vagrantfile
+
+{% highlight ruby %}
+
+  if Vagrant.has_plugin?("vagrant-proxyconf")
+    config.proxy.http     = ENV['http_proxy']
+
+    config.proxy.https    = ENV['https_proxy']
+
+    config.proxy.no_proxy = ENV['no_proxy']
+  end
+{% endhighlight %}
+
+Current proxy setting will set proxy for apt/yum, docker, git, npm if they are installed on the box.
+
 ## Separate vm definition from Vagrant code
 
 ## Use vagrant cacher to speed up provision time

@@ -3,7 +3,7 @@ layout: post
 title:  "Vagrant kick start tips"
 date:   2017-04-24 09:40:49 -0500
 categories: vagrant
-tags: general
+tags: DevOps Vagrant
 ---
 # Kick start with vagrant
 

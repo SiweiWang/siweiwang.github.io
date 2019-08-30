@@ -2,8 +2,8 @@
 layout: post
 title:  "Vagrant kick start tips"
 date:   2017-04-24 09:40:49 -0500
-categories: vagrant
-tags: DevOps Vagrant
+categories: DevOps
+tags: [DevOps, Vagrant]
 ---
 # Kick start with vagrant
 
@@ -97,7 +97,7 @@ A easy to setup proxy for the vms in vagrant is to use [vagrant-proxyconf](http:
 
 Following code will get the proxy setting set in current environment variable and apply them to the vm
 
-First of all, install the plugin 
+First of all, install the plugin
 
 {% highlight Bash shell scripts %}
 

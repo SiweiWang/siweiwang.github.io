@@ -2,8 +2,8 @@
 layout: post
 title:  "Getting started with Minishift"
 date:   2018-08-05 09:40:49 -0500
-categories: minishift
-tags: DevOps minishift
+categories: DevOps
+tags: [DevOps, minishift]
 ---
 
 ## Install minishift on Mac
@@ -74,7 +74,7 @@ You can create an example app using:
 You can track the log using:
 
 `oc logs -f bc/nodejs-ex`
- 
+
 After the build is finished, a new service should get started. You can list the service using
 
 `oc get service`
@@ -87,12 +87,12 @@ this command will create a new route in openshift to allow external traffic to t
 
 `oc get routes`
 
-HOST is where the host where the service is exposed at. 
+HOST is where the host where the service is exposed at.
 
 For example
 
 ```
-$ oc get routes  
+$ oc get routes
 NAME        HOST/PORT                                 PATH      SERVICES    PORT       TERMINATION   WILDCARD
 nodejs-ex   nodejs-ex-myproject.192.168.64.2.nip.io             nodejs-ex   8080-tcp                 None
 ```
